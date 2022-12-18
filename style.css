@@ -1,98 +1,195 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+:root {
+  line-height: 24px;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html, body {
+  width: 100%;
+  background: rgb(205, 135, 247);
 }
 
 body {
-  margin: 0;
+  padding: 64px 16px 64px;
+}
+
+.BackgroundAnimation_Root {
+  z-index: 0;
+}
+
+.BackgroundAnimation_Animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.App_Root {
+  margin: 0px auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+
+.PersonalBio_Section {
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100%;
+}
+
+.PersonalBio_Image {
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  display: block;
+  object-fit: contain;
+  object-position: initial;
+  filter: none;
+  margin-bottom: 16px;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  margin: 0px;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+h2 {
+  padding: 0px;
+  margin: 0px;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  line-height: 1.5;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media screen and (min-width: 576px) {
+  h2 {
+    font-size: 16px;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+}
+
+.SocialIcons_Root {
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.SocialIcons_Link {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: inherit;
+  text-decoration: underline;
+  transition: transform 0s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  z-index: 0;
+}
+
+.SocialIcons_Link:hover {
+  transform: scale(1.075);
+}
+
+.SocialIcons_Icon {
+  pointer-events: none;
+  margin-top: 8px;
+  fill: rgb(0, 0, 0);
+  width: 32px;
+  height: 32px;
+}
+
+.SocialList_Link {
+  margin: 0px;
+  border: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  text-decoration: none;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: auto;
+  position: relative;
+  padding: 16px 20px;
+  width: 100%;
+  appearance: none;
+  box-sizing: border-box;
+  vertical-align: middle;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  white-space: normal;
+  background: none;
+  color: inherit;
+  transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+  padding-left: 44px;
+  padding-right: 44px;
+
+  z-index: 0;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 2px solid rgb(0, 0, 0);
+  transition: none 0s ease 0s;
+  box-shadow: rgb(0 0 0) 8px 8px 0px 0px;
+  color: rgb(136, 136, 136);
+  background-color: rgb(255, 255, 255);
+  width: calc(100% - 12px);
+  border-radius: 30px;
+}
+
+.SocialList_Link:hover {
+  transform: translate(4px, 4px);
+  box-shadow: rgb(0 0 0) 4px 4px 0px 0px;
+}
+
+.SocialList_LinkText {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 576px) {
+  .SocialList_LinkText {
+    font-size: 16px;
   }
 }
