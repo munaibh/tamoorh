@@ -29,16 +29,13 @@ body {
   padding: 64px 16px 64px;
 }
 
-.BackgroundAnimation_Root {
-  z-index: 0;
-}
-
-.BackgroundAnimation_Animation {
+.BackdropAnimation_Root {
+  box-sizing: border-box;
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 0;
+  z-index: 0;
 }
 
 .App_Root {
