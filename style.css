@@ -30,7 +30,6 @@ body {
 }
 
 .BackdropAnimation_Root {
-  box-sizing: border-box;
   position: fixed;
   left: 0;
   right: 0;
